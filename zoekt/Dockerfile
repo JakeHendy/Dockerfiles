@@ -1,4 +1,5 @@
-FROM alpine
+FROM alpine:latest
+LABEL maintainer "Jake Hendy <me@jakehendy.com>"
 
 RUN apk add --no-cache go git musl-dev bash
 RUN export GOPATH=$(go env GOPATH)
