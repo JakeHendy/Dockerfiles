@@ -7,6 +7,7 @@ RUN go get -u github.com/fsnotify/fsnotify
 RUN go get -u gopkg.in/src-d/go-git.v4/
 RUN go get github.com/google/zoekt/
 RUN go install github.com/google/zoekt/cmd/zoekt-git-index
+RUN go install github.com/google/zoekt/cmd/zoekt-index
 RUN go install github.com/google/zoekt/cmd/zoekt-webserver
 
 COPY run-zoekt.sh /usr/bin/run-zoekt.sh
