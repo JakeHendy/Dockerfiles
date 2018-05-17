@@ -16,7 +16,7 @@ RUN go get -u gopkg.in/src-d/go-git.v4/
 RUN go get github.com/google/zoekt/
 # Looks after git indices specifically
 RUN go install github.com/google/zoekt/cmd/zoekt-git-index
-# Provides the searchable web interface
+RUN go install github.com/google/zoekt/cmd/zoekt-index
 RUN go install github.com/google/zoekt/cmd/zoekt-webserver
 
 # Wrapper script which provides a first run index, then starts the webserver
